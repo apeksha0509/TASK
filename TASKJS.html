@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MS-Concept</title>
+	<script type="text/javascript">
+	function changeColor1(){
+	var color1 = document.getElementById("colorPicker1").value;
+	document.getElementById("name1").style.color = color1;
+	//alert("You selected "+color1+" color.");
+	}
+	function changeColor2(){
+	var color2 = document.getElementById("colorPicker2").value;
+	document.getElementById("name2").style.color = color2;
+	}
+	function changeFontSize(){
+	var fontsize1 = document.getElementById("fontsizePicker1").value;
+	document.getElementById("name3").style.fontSize = fontsize1;
+	}
+	function changeFontFamily(){
+	var fontfamily1 = document.getElementById("fontfamilyPicker1").value;
+	document.getElementById("name4").style.fontFamily = fontfamily1;
+	}
+	function changeRange(){
+	var fontrange = document.getElementById("range1");
+	var out = document.getElementById("demo").innerHTML = "<b>"+fontrange.value+" pixel</b>";
+	font = fontrange.value+"px";
+	document.getElementById("name5").style.fontSize = font;
+	}
+	</script>
+	<script>
+	function change1()
+	{
+		var v1 = document.getElementById("f1").value;
+		document.getElementById("name1").innerHTML = v1;
+	}
+	function change2()
+	{
+		var v2 = document.getElementById("f2").value;
+		document.getElementById("name2").innerHTML = v2;
+	}
+	function change3()
+	{
+		var v3 = document.getElementById("f3").value;
+		document.getElementById("name3").innerHTML = v3;
+	}
+	function change4()
+	{
+		var v4 = document.getElementById("f4").value;
+		document.getElementById("name4").innerHTML = v4;
+	}
+	function change5()
+	{
+		var v5 = document.getElementById("f5").value;
+		document.getElementById("name5").innerHTML = v5;
+		document.getElementById("counting").innerHTML = "Words in message is "+v5.split(' ').length+"<br>& Character in message is "+v5.length;
+	}
+	</script>
+	<script>
+	function closetab()
+	{
+	document.getElementById("demoopen").innerHTML = "";
+	document.getElementById("counting").innerHTML = "";
+	}
+	</script>
+	<style>
+	table
+	{
+	margin-top:50px;
+	margin-bottom:50px;
+	}
+	#f1,#f2,#f3,#f4,#f5
+	{
+		width:500px;
+		height:25px;
+		font-size:20px;
+		text-align:center;
+		text-transform:capitalize;
+		margin-top:35px;
+	}
+	#b1,#b2,#b3,#b4,#b5,#b6
+	{
+	height:30px;
+	width:150px;
+	border-color:black;
+	background-color:green;
+	color:white;
+	font-family:arial;
+	font-size:20px;
+	font-weight:700;
+	border-color:white;
+	}
+	#b1:hover,#b2:hover,#b3:hover,#b4:hover,#b5:hover,#b6:hover
+	{
+	box-shadow:1px 1px 20px black;
+	font-size:21px;
+	}
+	#b1:active,#b2:active,#b3:active,#b4:active,#b5:active,#b6:active
+	{
+	color:red;
+	background-color:white;
+	}
+	big
+	{
+	text-transform:capitalize;
+	}
+	#sel_color
+	{
+	height:20px;
+	width:225px;
+	align:center;
+	font-size:16px;
+	}
+	#partition
+	{
+	height:350px;
+	margin-top:15px;
+	}
+	#taskopen
+	{
+	margin-bottom:25px;
+	height:50px;
+	width:250px;
+	border-color:black;
+	background-color:BlueViolet;
+	color:white;
+	font-family:arial;
+	font-size:20px;
+	font-weight:700;
+	border-color:white;
+	}
+	#taskopen:hover
+	{
+	box-shadow:1px 1px 20px black;
+	font-size:21px;
+	}
+	#taskopen:active
+	{
+	background-color:white;
+	color:red;
+	}
+#colorPicker1,#fontsizePicker1,#fontfamilyPicker1
+{
+   overflow:hidden;
+   width:250px;
+   height:40px;
+   font-size:20px;
+   -moz-border-radius: 9px 9px 9px 9px;
+   -webkit-border-radius: 9px 9px 9px 9px;
+   border-radius: 9px 9px 9px 9px;
+   box-shadow: 2px 2px 15px blue;
+   background: #b3b3ff no-repeat scroll 150px center;
+}
+
+	</style>
+</head>
+<body>
+<form name="myform">
+	<table width="1200px" border="5" align="center">
+		<tr height="200px" align="center">
+			<th width="850px">
+			<big id="name1" style="font-size:35px">This is Demo for Apeksha jangid.</big><br>
+			<input type="text" id="f1" name="fi1" placeholder="Your's text..." onkeyup="change1()"/>
+			<!-- <input type="button" id="b1" value="Change Text" onclick="change1()"/> -->
+			<br><div id="s1"></div>
+			</th>
+			<td width="350px">
+			<!-- <select id="colorPicker1" onChange="changeColor1()" onmousedown="if(this.options.length>5){this.size=5;}"  onchange='this.size=0;' onblur="this.size=0;"> -->
+			<select id="colorPicker1" onChange="changeColor1()">
+			<option value="black">--- SELECT COLOR ---</option>
+			<option value="AliceBlue" style="color:AliceBlue;">AliceBlue</option>
+			<option value="AntiqueWhite" style="color:AntiqueWhite;">AntiqueWhite</option>
+			<option value="Aqua" style="color:Aqua;">Aqua</option>
+			<option value="Aquamarine" style="color:Aquamarine;">Aquamarine</option>
+			<option value="Azure" style="color:Azure;">Azure</option>
+			<option value="Beige" style="color:Beige;">Beige</option>
+			<option value="Bisque" style="color:Bisque;">Bisque</option>
+			<option value="Black" style="color:Black;">Black</option>
+			<option value="BlanchedAlmond" style="color:BlanchedAlmond;">BlanchedAlmond</option>
+			<option value="Blue" style="color:Blue;">Blue</option>
+			<option value="BlueViolet" style="color:BlueViolet;">BlueViolet</option>
+			<option value="Brown" style="color:Brown;">Brown</option>
+			<option value="BurlyWood" style="color:BurlyWood;">BurlyWood</option>
+			<option value="CadetBlue" style="color:CadetBlue;">CadetBlue</option>
+			<option value="Chartreuse" style="color:Chartreuse;">Chartreuse</option>
+			<option value="Chocolate" style="color:Chocolate;">Chocolate</option>
+			<option value="Coral" style="color:Coral;">Coral</option>
+			<option value="CornflowerBlue" style="color:CornflowerBlue;">CornflowerBlue</option>
+			<option value="Cornsilk" style="color:Cornsilk;">Cornsilk</option>
+			<option value="Crimson" style="color:Crimson;">Crimson</option>
+			<option value="Cyan" style="color:Cyan;">Cyan</option>
+			<option value="DarkBlue" style="color:DarkBlue;">DarkBlue</option>
+			<option value="DarkCyan" style="color:DarkCyan;">DarkCyan</option>
+			<option value="DarkGoldenRod" style="color:DarkGoldenRod;">DarkGoldenRod</option>
+			<option value="DarkGray" style="color:DarkGray;">DarkGray</option>
+			<option value="DarkGreen" style="color:DarkGreen;">DarkGreen</option>
+			<option value="DarkKhaki" style="color:DarkKhaki;">DarkKhaki</option>
+			<option value="DarkMagenta" style="color:DarkMagenta;">DarkMagenta</option>
+			<option value="DarkOliveGreen" style="color:DarkOliveGreen;">DarkOliveGreen</option>
+			<option value="DarkOrange" style="color:DarkOrange;">DarkOrange</option>
+			<option value="DarkOrchid" style="color:DarkOrchid;">DarkOrchid</option>
+			<option value="DarkRed" style="color:DarkRed;">DarkRed</option>
+			<option value="DarkSalmon" style="color:DarkSalmon;">DarkSalmon</option>
+			<option value="DarkSeaGreen" style="color:DarkSeaGreen;">DarkSeaGreen</option>
+			<option value="DarkSlateBlue" style="color:DarkSlateBlue;">DarkSlateBlue</option>
+			<option value="DarkSlateGray" style="color:DarkSlateGray;">DarkSlateGray</option>
+			<option value="DarkTurquoise" style="color:DarkTurquoise;">DarkTurquoise</option>
+			<option value="DarkViolet" style="color:DarkViolet;">DarkViolet</option>
+			<option value="DeepPink" style="color:DeepPink;">DeepPink</option>
+			<option value="DeepSkyBlue" style="color:DeepSkyBlue;">DeepSkyBlue</option>
+			<option value="DimGray" style="color:DimGray;">DimGray</option>
+			<option value="DodgerBlue" style="color:DodgerBlue;">DodgerBlue</option>
+			<option value="FireBrick" style="color:FireBrick;">FireBrick</option>
+			<option value="FloralWhite" style="color:FloralWhite;">FloralWhite</option>
+			<option value="ForestGreen" style="color:ForestGreen;">ForestGreen</option>
+			<option value="Fuchsia" style="color:Fuchsia;">Fuchsia</option>
+			<option value="Gainsboro" style="color:Gainsboro;">Gainsboro</option>
+			<option value="GhostWhite" style="color:GhostWhite;">GhostWhite</option>
+			<option value="Gold" style="color:Gold;">Gold</option>
+			<option value="GoldenRod" style="color:GoldenRod;">GoldenRod</option>
+			<option value="Gray" style="color:Gray;">Gray</option>
+			<option value="Green" style="color:Green;">Green</option>
+			<option value="GreenYellow" style="color:GreenYellow;">GreenYellow</option>
+			<option value="HoneyDew" style="color:HoneyDew;">HoneyDew</option>
+			<option value="HotPink" style="color:HotPink;">HotPink</option>
+			<option value="IndianRed" style="color:IndianRed;">IndianRed</option>
+			<option value="Indigo" style="color:Indigo;">Indigo</option>
+			<option value="Ivory" style="color:Ivory;">Ivory</option>
+			<option value="Khaki" style="color:Khaki;">Khaki</option>
+			<option value="Lavender" style="color:Lavender;">Lavender</option>
+			<option value="LavenderBlush" style="color:LavenderBlush;">LavenderBlush</option>
+			<option value="LawnGreen" style="color:LawnGreen;">LawnGreen</option>
+			<option value="LemonChiffon" style="color:LemonChiffon;">LemonChiffon</option>
+			<option value="LightBlue" style="color:LightBlue;">LightBlue</option>
+			<option value="LightCoral" style="color:LightCoral;">LightCoral</option>
+			<option value="LightCyan" style="color:LightCyan;">LightCyan</option>
+			<option value="LightGoldenRodYellow" style="color:LightGoldenRodYellow;">LightGoldenRodYellow</option>
+			<option value="LightGray" style="color:LightGray;">LightGray</option>
+			<option value="LightGreen" style="color:LightGreen;">LightGreen</option>
+			<option value="LightPink" style="color:LightPink;">LightPink</option>
+			<option value="LightPink" style="color:LightPink;">LightPink</option>
+			<option value="LightSalmon" style="color:LightSalmon;">LightSalmon</option>
+			<option value="LightSeaGreen" style="color:LightSeaGreen;">LightSeaGreen</option>
+			<option value="LightSkyBlue" style="color:LightSkyBlue;">LightSkyBlue</option>
+			<option value="LightSlateGray" style="color:LightSlateGray;">LightSlateGray</option>
+			<option value="LightSteelBlue" style="color:LightSteelBlue;">LightSteelBlue</option>
+			<option value="LightYellow" style="color:LightYellow;">LightYellow</option>
+			<option value="Lime" style="color:Lime;">Lime</option>
+			<option value="LimeGreen" style="color:LimeGreen;">LimeGreen</option>
+			<option value="Linen" style="color:Linen;">Linen</option>
+			<option value="Magenta" style="color:Magenta;">Magenta</option>
+			<option value="Maroon" style="color:Maroon;">Maroon</option>
+			<option value="MediumAquaMarine" style="color:MediumAquaMarine;">MediumAquaMarine</option>
+			<option value="MediumBlue" style="color:MediumBlue;">MediumBlue</option>
+			<option value="MediumOrchid" style="color:MediumOrchid;">MediumOrchid</option>
+			<option value="MediumPurple" style="color:MediumPurple;">MediumPurple</option>
+			<option value="MediumSeaGreen" style="color:MediumSeaGreen;">MediumSeaGreen</option>
+			<option value="MediumSeaGreen" style="color:MediumSeaGreen;">MediumSeaGreen</option>
+			<option value="MediumSpringGreen" style="color:MediumSpringGreen;">MediumSpringGreen</option>
+			<option value="MediumTurquoise" style="color:MediumTurquoise;">MediumTurquoise</option>
+			<option value="MediumVioletRed" style="color:MediumVioletRed;">MediumVioletRed</option>
+			<option value="MidnightBlue" style="color:MidnightBlue;">MidnightBlue</option>
+			<option value="MintCream" style="color:MintCream;">MintCream</option>
+			<option value="MistyRose" style="color:MistyRose;">MistyRose</option>
+			<option value="Moccasin" style="color:Moccasin;">Moccasin</option>
+			<option value="NavajoWhite" style="color:NavajoWhite;">NavajoWhite</option>
+			<option value="Navy" style="color:Navy;">Navy</option>
+			<option value="OldLace" style="color:OldLace;">OldLace</option>
+			<option value="Olive" style="color:Olive;">Olive</option>
+			<option value="OliveDrab" style="color:OliveDrab;">OliveDrab</option>
+			<option value="Orange" style="color:Orange;">Orange</option>
+			<option value="OrangeRed" style="color:OrangeRed;">OrangeRed</option>
+			<option value="Orchid" style="color:Orchid;">Orchid</option>
+			<option value="PaleGoldenRod" style="color:PaleGoldenRod;">PaleGoldenRod</option>
+			<option value="PaleGreen" style="color:PaleGreen;">PaleGreen</option>
+			<option value="PaleTurquoise" style="color:PaleTurquoise;">PaleTurquoise</option>
+			<option value="PaleVioletRed" style="color:PaleVioletRed;">PaleVioletRed</option>
+			<option value="PapayaWhip" style="color:PapayaWhip;">PapayaWhip</option>
+			<option value="PeachPuff" style="color:PeachPuff;">PeachPuff</option>
+			<option value="Peru" style="color:Peru;">Peru</option>
+			<option value="Pink" style="color:Pink;">Pink</option>
+			<option value="Plum" style="color:Plum;">Plum</option>
+			<option value="PowderBlue" style="color:PowderBlue;">PowderBlue</option>
+			<option value="Purple" style="color:Purple;">Purple</option>
+			<option value="RebeccaPurple" style="color:RebeccaPurple;">RebeccaPurple</option>
+			<option value="Red" style="color:Red;">Red</option>
+			<option value="RosyBrown" style="color:RosyBrown;">RosyBrown</option>
+			<option value="RoyalBlue" style="color:RoyalBlue;">RoyalBlue</option>
+			<option value="SaddleBrown" style="color:SaddleBrown;">SaddleBrown</option>
+			<option value="Salmon" style="color:Salmon;">Salmon</option>
+			<option value="SandyBrown" style="color:SandyBrown;">SandyBrown</option>
+			<option value="SeaGreen" style="color:SeaGreen;">SeaGreen</option>
+			<option value="SeaShell" style="color:SeaShell;">SeaShell</option>
+			<option value="Sienna" style="color:Sienna;">Sienna</option>
+			<option value="Silver" style="color:Silver;">Silver</option>
+			<option value="SkyBlue" style="color:SkyBlue;">SkyBlue</option>
+			<option value="SlateBlue" style="color:SlateBlue;">SlateBlue</option>
+			<option value="SlateGray" style="color:SlateGray;">SlateGray</option>
+			<option value="Snow" style="color:Snow;">Snow</option>
+			<option value="SpringGreen" style="color:SpringGreen;">SpringGreen</option>
+			<option value="SteelBlue" style="color:SteelBlue;">SteelBlue</option>
+			<option value="Tan" style="color:Tan;">Tan</option>
+			<option value="Teal" style="color:Teal;">Teal</option>
+			<option value="Thistle" style="color:Thistle;">Thistle</option>
+			<option value="Tomato" style="color:Tomato;">Tomato</option>
+			<option value="Turquoise" style="color:Turquoise;">Turquoise</option>
+			<option value="Violet" style="color:Violet;">Violet</option>
+			<option value="Wheat" style="color:Wheat;">Wheat</option>
+			<option value="White" style="color:White;">White</option>
+			<option value="WhiteSmoke" style="color:WhiteSmoke;">WhiteSmoke</option>
+			<option value="Yellow" style="color:Yellow;">Yellow</option>
+			<option value="YellowGreen" style="color:YellowGreen;">YellowGreen</option>
+			</select>
+			</td>
+		</tr>
+		<tr height="200px" align="center">
+			<th width="850px">
+			<big id="name2" style="font-size:35px">This is Demo for Apeksha jangid.</big><br>
+			<input type="text" id="f2" placeholder="Your's text..." onkeyup="change2()"/>
+			<!-- <input type="button" id="b2" value="Change Text" onclick="change2()"/> -->
+			</th>
+			<td width="350px"><input type="color" id="colorPicker2" onChange="changeColor2()">&nbsp;&nbsp;&nbsp;<input id="sel_color" value=" Select Color from Color Picker [Default Color : Black]." onclick='alert(this.value)'></input></input></td>
+		</tr>
+		<tr height="300px" align="center">
+			<th width="850px">
+			<div style="height:50px;margin-bottom:75px;"><big id="name3" style="font-size:35px">This is Demo for Apeksha jangid.</big></div>
+			<input type="text" id="f3" placeholder="Your's text..." onkeyup="change3()"/>
+			<!-- <input type="button" id="b3" value="Change Text" onclick="change3()"/> -->
+			</th>
+			<td width="350px">
+			<select id="fontsizePicker1" onChange="changeFontSize()">
+			<option value="">--- FONT SIZE ---</option>
+			<option value="8px">Font Size - 08px</option>
+			<option value="16px">Font Size - 13px</option>
+			<option value="24px">Font Size - 24px</option>
+			<option value="32px">Font Size - 32px</option>
+			<option value="40px">Font Size - 40px</option>
+			<option value="48px">Font Size - 48px</option>
+			<option value="56px">Font Size - 56px</option>
+			<option value="64px">Font Size - 64px</option>
+			<option value="70px">Font Size - 70px</option>
+			</select>
+			</td>
+		</tr>
+		<tr height="350px" align="center">
+			<th width="850px">
+			<div style="height:50px;margin-bottom:75px;"><big id="name4" style="font-size:50px" onmouseover="window.alert('Current Font Style is '+document.myform.fontfamilyPicker1.value+'.')">This is Demo for Apeksha jangid.</big></div>
+			<input type="text" id="f4" placeholder="Your's text..." onkeyup="change4()"/><br><br><span style="color:red;font-size:14px;">(Mouse over on the Text to known Font Family/Font Style)</span>
+			<!-- <input type="button" id="b4" value="Change Text" onclick="change4()"/> -->
+			</th>
+			<td width="350px">
+			<select id="fontfamilyPicker1" onChange="changeFontFamily()">
+			<option value="Default">--- FONT FAMILY ---</option>
+			<option value="Agency FB" style="font-family:agency fb">Agency FB</option>
+			<option value="Algerian" style="font-family:algerian">Algerian</option>
+			<option value="Arial" style="font-family:arial">Arial</option>
+			<option value="Arial black" style="font-family:arial black">Arial Black</option>
+			<option value="Arial Unicode MS" style="font-family:Arial Unicode MS">Arial Unicode MS</option>
+			<option value="Bahnschrift" style="font-family:Bahnschrift">Bahnschrift</option>
+			<option value="Bahnschrift Light" style="font-family:Bahnschrift Light">Bahnschrift Light</option>
+			<option value="Bahnschrift SemiBold" style="font-family:Bahnschrift SemiBold">Bahnschrift SemiBold</option>
+			<option value="Bahnschrift SemiLight" style="font-family:Bahnschrift SemiLight">Bahnschrift SemiLight</option>
+			<option value="Baskerville Old Face" style="font-family:Baskerville Old Face">Baskerville Old Face</option>
+			<option value="Bell MT" style="font-family:Bell MT">Bell MT</option>
+			<option value="Berlin Sans FB" style="font-family:Berlin Sans FB">Berlin Sans FB</option>
+			<option value="Berlin Sans FB Demi" style="font-family:Berlin Sans FB Demi">Berlin Sans FB Demi</option>
+			<option value="Bernard MT Condensed" style="font-family:Bernard MT Condensed">Bernard MT Condensed</option>
+			<option value="Blackadder ITC" style="font-family:Blackadder ITC">Blackadder ITC</option>
+			<option value="Bodoni MT" style="font-family:Bodoni MT">Bodoni MT</option>
+			<option value="Bodoni MT Black" style="font-family:Bodoni MT Black">Bodoni MT Black</option>
+			<option value="Bodoni MT Condensed" style="font-family:Bodoni MT Condensed">Bodoni MT Condensed</option>
+			<option value="Book Antiqua" style="font-family:Book Antiqua">Book Antiqua</option>
+			<option value="Bookman Old Style" style="font-family:Bookman Old Style">Bookman Old Style</option>
+			<option value="Bradley Hand ITC" style="font-family:Bradley Hand ITC">Bradley Hand ITC</option>
+			<option value="Britannic Bold" style="font-family:Britannic Bold">Britannic Bold</option>
+			<option value="Broadway" style="font-family:Broadway">Broadway</option>
+			<option value="Brush Script MT" style="font-family:Brush Script MT">Brush Script MT</option>
+			<option value="Calibri" style="font-family:Calibri">Calibri</option>
+			<option value="Calibri Light" style="font-family:Calibri Light">Calibri Light</option>
+			<option value="Californian FB" style="font-family:Californian FB">Californian FB</option>
+			<option value="Calisto MT" style="font-family:Calisto MT">Calisto MT</option>
+			<option value="Cambria" style="font-family:Cambria">Cambria</option>
+			<option value="Cambria Math" style="font-family:Cambria Math">Cambria Math</option>
+			<option value="Candara" style="font-family:Candara">Candara</option>
+			<option value="Castellar" style="font-family:Castellar">Castellar</option>
+			<option value="Centaur" style="font-family:Centaur">Centaur</option>
+			<option value="Century" style="font-family:Century">Century</option>
+			<option value="Century Gothic" style="font-family:Century Gothic">Century Gothic</option>
+			<option value="Century Schoolbook" style="font-family:Century Schoolbook">Century Schoolbook</option>
+			<option value="Chiller" style="font-family:Chiller">Chiller</option>
+			<option value="Colonna MT" style="font-family:Colonna MT">Colonna MT</option>
+			<option value="Comic Sans MS" style="font-family:Comic Sans MS">Comic Sans MS</option>
+			<option value="Consolas" style="font-family:Consolas">Consolas</option>
+			<option value="Constantia" style="font-family:Constantia">Constantia</option>
+			<option value="Cooper Black" style="font-family:Cooper Black">Cooper Black</option>
+			<option value="Copperplate Gothic Light" style="font-family:Copperplate Gothic Light">Copperplate Gothic Light</option>
+			<option value="Corbel" style="font-family:Corbel">Corbel</option>
+			<option value="Courier New" style="font-family:Courier New">Courier New</option>
+			<option value="Curlz MT" style="font-family:Curlz MT">Curlz MT</option>
+			<option value="cursive" style="font-family:cursive">Cursive</option>
+			<option value="Ebrima" style="font-family:Ebrima">Ebrima</option>
+			<option value="Edwardian Script ITC" style="font-family:Edwardian Script ITC">Edwardian Script ITC</option>
+			<option value="Elephant" style="font-family:Elephant">Elephant</option>
+			<option value="Engravers MT" style="font-family:Engravers MT">Engravers MT</option>
+			<option value="Felix Titling" style="font-family:Felix Titling">Felix Titling</option>
+			<option value="Footlight MT Light" style="font-family:Footlight MT Light">Footlight MT Light</option>
+			<option value="forte" style="font-family:forte">Forte</option>
+			<option value="Franklin Gothic Book" style="font-family:Franklin Gothic Book">Franklin Gothic Book</option>
+			<option value="Franklin Gothic Medium" style="font-family:Franklin Gothic Medium">Franklin Gothic Medium</option>
+			<option value="Freestyle Script" style="font-family:Freestyle Script">Freestyle Script</option>
+			<option value="Gabriola" style="font-family:Gabriola">Gabriola</option>
+			<option value="Gadugi" style="font-family:Gadugi">Gadugi</option>
+			<option value="Garamond" style="font-family:Garamond">Garamond</option>
+			<option value="Garamond Narrow" style="font-family:Garamond Narrow">Garamond Narrow</option>
+			<option value="Georgia" style="font-family:Georgia">Georgia</option>
+			<option value="Gigi" style="font-family:Gigi">Gigi</option>
+			<option value="Gill Sans MT" style="font-family:Gill Sans MT">Gill Sans MT</option>
+			<option value="Gill Sans MT Condensed" style="font-family:Gill Sans MT Condensed">Gill Sans MT Condensed</option>
+			<option value="Goudy Old Style" style="font-family:Goudy Old Style">Goudy Old Style</option>
+			<option value="Goudy Stout" style="font-family:Goudy Stout">Goudy Stout</option>
+			<option value="Haettenschweiler" style="font-family:Haettenschweiler">Haettenschweiler</option>
+			<option value="Harrington" style="font-family:Harrington">Harrington</option>
+			<option value="High Tower Text" style="font-family:High Tower Text">High Tower Text</option>
+			<option value="impact" style="font-family:impact">Impact</option>
+			<option value="HoloLens MDL2 Assets" style="font-family:HoloLens MDL2 Assets">HoloLens MDL2 Assets</option>
+			<option value="Imprint MT Shadow" style="font-family:Imprint MT Shadow">Imprint MT Shadow</option>
+			<option value="Informal Roman" style="font-family:Informal Roman">Informal Roman</option>
+			<option value="Javanese Text" style="font-family:Javanese Text">Javanese Text</option>
+			<option value="Jokerman" style="font-family:Jokerman">Jokerman</option>
+			<option value="Juice ITC" style="font-family:Juice ITC">Juice ITC</option>
+			<option value="Kristen ITC" style="font-family:Kristen ITC">Kristen ITC</option>
+			<option value="Kunstler Script" style="font-family:Kunstler Script">Kunstler Script</option>
+			<option value="Leelawadee UI" style="font-family:Leelawadee UI">Leelawadee UI</option>
+			<option value="Lucida Bright" style="font-family:Lucida Bright">Lucida Bright</option>
+			<option value="Lucida Calligraphy" style="font-family:Lucida Calligraphy">Lucida Calligraphy</option>
+			<option value="Lucida Console" style="font-family:Lucida Console">Lucida Console</option>
+			<option value="Lucida Fax" style="font-family:Lucida Fax">Lucida Fax</option>
+			<option value="Lucida Handwriting" style="font-family:Lucida Handwriting">Lucida Handwriting</option>
+			<option value="Lucida Sans" style="font-family:Lucida Sans">Lucida Sans</option>
+			<option value="Lucida Sans Typewriter" style="font-family:Lucida Sans Typewriter">Lucida Sans Typewriter</option>
+			<option value="Lucida Sans Unicode" style="font-family:Lucida Sans Unicode">Lucida Sans Unicode</option>
+			<option value="magneto" style="font-family:magneto">Magneto</option>
+			<option value="Maiandra GD" style="font-family:Maiandra GD">Maiandra GD</option>
+			<option value="Malgun Gothic" style="font-family:Malgun Gothic">Malgun Gothic</option>
+			<option value="Matura MT Script Capitals" style="font-family:Matura MT Script Capitals">Matura MT Script Capitals</option>
+			<option value="Microsoft Sans Serif" style="font-family:Microsoft Sans Serif">Microsoft Sans Serif</option>
+			<option value="MingLiU_HKSCS-ExtB" style="font-family:MingLiU_HKSCS-ExtB">MingLiU_HKSCS-ExtB</option>
+			<option value="Mistral" style="font-family:Mistral">Mistral</option>	
+			<option value="Monotype Corsiva" style="font-family:Monotype Corsiva">Monotype Corsiva</option>	
+			<option value="MV Boli" style="font-family:MV Boli">MV Boli</option>
+			<option value="Niagara Engraved" style="font-family:Niagara Engraved">Niagara Engraved</option>
+			<option value="Niagara Solid" style="font-family:Niagara Solid">Niagara Solid</option>
+			<option value="Old English Text MT" style="font-family:Old English Text MT">Old English Text MT</option>
+			<option value="Onyx" style="font-family:Onyx">Onyx</option>
+			<option value="Palace Script MT" style="font-family:">z</option>
+			<option value="Papyrus" style="font-family:Papyrus">Papyrus</option>
+			<option value="Playbill" style="font-family:Playbill">Playbill</option>
+			<option value="Poor Richard" style="font-family:Poor Richard">Poor Richard</option>
+			<option value="Rage Italic" style="font-family:Rage Italic">Rage Italic</option>
+			<option value="Ravie" style="font-family:Ravie">Ravie</option>
+			<option value="Segoe UI Black" style="font-family:Segoe UI Black">Segoe UI Black</option>
+			<option value="Snap ITC" style="font-family:Snap ITC">Snap ITC</option>
+			<option value="Stencil" style="font-family:Stencil">Stencil</option>
+			<option value="Showcard Gothic" style="font-family:Showcard Gothic">Showcard Gothic</option>
+			<option value="Tempus Sans ITC" style="font-family:Tempus Sans ITC">Tempus Sans ITC</option>
+			<option value="Tw  Cen MT" style="font-family:Tw Cen MT">Tw Cen MT</option>
+			<option value="Verdana" style="font-family:Verdana">Verdana</option>
+			<option value="Viner Hand ITC" style="font-family:Viner Hand ITC">Viner Hand ITC</option>
+			<option value="Vivaldi" style="font-family:Vivaldi">Vivaldi</option>
+			<option value="Wide Latin" style="font-family:Wide Latin">Wide Latin</option>
+			<option value="Yu Gothic" style="font-family:Yu Gothic">Yu Gothic</option>
+			</select>
+			</td>
+		</tr>
+		<tr height="650px" align="center">
+			<th width="850px">
+			<div id="taskarea"><input type="button" id="taskopen" onclick="opentask()" value="Touch to Open Task !!!"/></div>
+			<div id="partition"><big id="name5" style="font-size:35px;font-family:arial;">This is for Demo Apeksha jangid.</big></div><br><br>
+			<div id="demoopen"></div>
+			<div id="counting"></div>
+			</th>
+			<td width="350px">
+			<sup><b style="color:blue;">[min]</b>&nbsp;20px</sup>&nbsp;<input type="range" min="20" max="100" value="60" id="range1" onclick="changeRange()"></input>&nbsp;<sup>100px&nbsp;<b style="color:blue;">[max]</b><br><br><strong style="color:blue;">Font size:&nbsp;<span id="demo">default</span></sup></strong>
+			</td>
+			<script>
+			function opentask()
+			{
+			var dataopen= "<input type='text' id='f5' placeholder='Your&#39;s text...'/>&nbsp;&nbsp;<input type='button'' id='b5' value='Change Text' onclick='change5()'/><br><input type='button' id='b6' onclick='closetab()' value='Close Task'/>";
+			document.getElementById("demoopen").innerHTML = dataopen;
+			}
+			</script>
+		</tr>
+	</table>
+</form>
+<script>
+var myWindow;
+function openWin()
+{
+    myWindow = window.open("", "", "width=500, height=250");
+}
+function blurWin()
+{
+    myWindow.blur();
+}
+function moveWin() 
+{
+    myWindow.moveBy(250, 250)
+}
+function focusWin()
+{
+    myWindow.focus();
+}
+function closeWin()
+{
+    myWindow.close();
+}
+function checkWin()
+{
+	var msg;
+    if (!myWindow)
+	{
+    msg = "Sir, Window was never opened.";
+    }
+	else
+	{ 
+        if (myWindow.closed)
+		{ 
+            msg = "Recently, You have closed window.";
+        }
+		else
+		{
+            msg = "Window is currently opened.";
+        }
+    
+    }
+    document.getElementById("msgsend").innerHTML = msg;
+}
+</script>
+<center style="margin-bottom:150px;">
+<input type="button" id="taskopen" value="Open New Window" onclick="openWin()">&nbsp;&nbsp;
+<input type="button" id="taskopen" value="Blur Window" onclick="blurWin()">&nbsp;&nbsp;
+<input type="button" id="taskopen" value="Move Window" onclick="moveWin()" />&nbsp;&nbsp;
+<input type="button" id="taskopen" value="Focus Window" onclick="focusWin()">&nbsp;&nbsp;
+<input type="button" id="taskopen" value="Close Window" onclick="closeWin()"/>
+<button onclick="checkWin()" id="taskopen">Is Window open?</button><br><span id="msgsend" style="color:royalblue;font-weight:bold;"></span>
+</center>
+</body>
+</html>
